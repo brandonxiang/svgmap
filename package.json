@@ -1,0 +1,8 @@
+{
+  "name": "svgmap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/brandonxiang/svgmap.git",
+  "author": "xiangweiping103 <xiangweiping103@pingan.com.cn>",
+  "license": "MIT"
+}
