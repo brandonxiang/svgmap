@@ -8,8 +8,11 @@
   }
   #tips {
     position: absolute;
-    top: 0;
-    left: 0;
+    background-color: white;
+    /* padding: 14px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px; */
   }
   </style>
 </head>
@@ -27,10 +30,9 @@
         width: '565',
         height: '475',
         hoverCallback: function(e, params) {
-          tips.style.top = e.y + 'px'
-          tips.style.left = e.x + 'px'
+          tips.style.top = e.y - 30 + 'px'
+          tips.style.left = e.x - 23 + 'px'
           tips.innerText = params.name
-          console.log(e, params);
         }
       });
       document.querySelector('#wrapper').appendChild(map.node);
