@@ -646,6 +646,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@svgdotjs/svg.js@^3.0.11":
+  version "3.0.11"
+  resolved "http://registry.npm.taobao.org/@svgdotjs/svg.js/download/@svgdotjs/svg.js-3.0.11.tgz#756e2f9844a27ee0917d341bd6961caf20703f55"
+  integrity sha1-dW4vmESifuCRfTQb1pYcryBwP1U=
+
 "@types/estree@0.0.39":
   version "0.0.39"
   resolved "http://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -1336,11 +1341,6 @@ esutils@^2.0.0, esutils@^2.0.2:
   version "2.0.2"
   resolved "http://registry.npm.taobao.org/esutils/download/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
   integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
-
-eve@~0.5.1:
-  version "0.5.4"
-  resolved "http://registry.npm.taobao.org/eve/download/eve-0.5.4.tgz#67d080b9725291d7e389e34c26860dd97f1debaa"
-  integrity sha1-Z9CAuXJSkdfjieNMJoYN2X8d66o=
 
 execa@^1.0.0:
   version "1.0.0"
@@ -2902,13 +2902,6 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
-
-snapsvg@^0.5.1:
-  version "0.5.1"
-  resolved "http://registry.npm.taobao.org/snapsvg/download/snapsvg-0.5.1.tgz#0caf52c79189a290746fc446cc5e863f6bdddfe3"
-  integrity sha1-DK9Sx5GJopB0b8RGzF6GP2vd3+M=
-  dependencies:
-    eve "~0.5.1"
 
 source-map-support@~0.5.9:
   version "0.5.10"

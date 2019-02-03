@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG.js</title>
+  <style>
+    #wrapper {
+      overflow: initial;
+    }
+  </style>
+</head>
+<body>
+  <svg id="wrapper"></svg>
+  <script src="https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"></script>
+  <script src="./data/china.js"></script>
+  <script>
+    function initMap() {
+      const highlight = ['henan', 'hainan', 'guangdong']
+      var svg = SVG().size(chinaConfig.width, chinaConfig.height);
+      Object.keys(chinaConfig.shapes).forEach((key) => {
+        const value = chinaConfig.shapes[key]
+        svg.path(value)
+           .fill("#7fc8ff")
+           .stroke({ color: '#fff', width: 1 })
+      });
+
+      return svg
+    }
+
+    const map = initMap();
+    document.querySelector('#wrapper').appendChild(map.node);
+
+
+  </script>
+</body>
+</html>
