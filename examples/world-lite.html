@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>svgmap for world</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <script src="../dist/lite.umd.js"></script>
+  <script src="./data/world.js"></script>
+  <script>
+    const map = svgmap({source: worldConfig.shapes, width: '977', height: '377'});
+    document.querySelector('#wrapper').appendChild(map.node);
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>svgmap for china</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <script src="../dist/index.umd.js"></script>
+  <script>
+    const map = svgmap({type: 'china', width: '565', height: '475'});
+    document.querySelector('#wrapper').appendChild(map.node);
+  </script>
+</body>
+</html>

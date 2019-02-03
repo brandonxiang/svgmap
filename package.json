@@ -1,8 +1,22 @@
 {
   "name": "svgmap",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/brandonxiang/svgmap.git",
   "author": "xiangweiping103 <xiangweiping103@pingan.com.cn>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "dist/index.umd.min.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "bili src/index.ts --format umd,esm --module-name svgmap --minify",
+    "build:lite": "bili src/lite.ts --format umd,esm --module-name svgmap --minify"
+  },
+  "dependencies": {
+    "snapsvg": "^0.5.1"
+  },
+  "devDependencies": {
+    "bili": "^4.2.5",
+    "rollup-plugin-typescript2": "^0.19.2",
+    "typescript": "^3.3.1"
+  }
 }

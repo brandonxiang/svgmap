@@ -1,4 +1,4 @@
-var chinaMapConfig = {
+export default {
 	width: 565,
 	height: 475,
 	shapes: {
