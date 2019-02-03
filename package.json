@@ -8,15 +8,15 @@
   "module": "dist/index.mjs",
   "source": "src/index.ts",
   "scripts": {
-    "build": "bili src/index.ts --format umd,esm --module-name svgmap --minify",
-    "build:lite": "bili src/lite.ts --format umd,esm --module-name svgmap --minify"
+    "dev": "bili src/lite.js --format umd --watch",
+    "build:lite": "bili src/lite.js --format umd,esm --module-name svgmap --minify",
+    "build:all": "bili src/index.js --format umd,esm --module-name svgmap --minify",
+    "build": "npm run build:lite && npm run build:all"
   },
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.11"
   },
   "devDependencies": {
-    "bili": "^4.2.5",
-    "rollup-plugin-typescript2": "^0.19.2",
-    "typescript": "^3.3.1"
+    "bili": "^4.2.5"
   }
 }

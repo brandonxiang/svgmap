@@ -8,7 +8,7 @@
   <script src="../dist/lite.umd.js"></script>
   <script src="./data/china.js"></script>
   <script>
-    const map = svgmap({source: chinaConfig.shapes, width: '565', height: '475'});
+    const map = svgmap({shapes: chinaConfig.shapes, width: '565', height: '475'});
     document.querySelector('#wrapper').appendChild(map.node);
   </script>
 </body>

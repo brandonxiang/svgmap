@@ -72,5 +72,22 @@ var chinaConfig = {
 		xianggang: '香港', 
 		taiwan: '台湾', 
 		aomen: '澳门'
+	},
+	properties: {
+		'heilongjiang': 1,
+		'beijing': 2,
+		'shanghai': 3,
+		'tianjin': 4,
+		'sichuan': 5,
+		'shandong': 6,
+		'shanxi': 3,
+		'zhejiang': 4,
+		'jiangshu': 2,
+		'hunan': 4,
+		'guizou': 5,
+		'neimenggu': 6,
+		'henan': 3,
+		'gansu': 4,
+		'ningxia': 2,
 	}
 };

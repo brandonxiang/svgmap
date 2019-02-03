@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SVG.js</title>
+  <title>dev</title>
   <style>
-    #svg {
-      width: 800px;
-      height: 500px;
-    }
+  body {
+    position: relative;
+  }
+  #tips {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   </style>
 </head>
 <body>
   <div id="wrapper"></div>
-  <script src="//jdc.jd.com/fd/h5/1701/snapsvg/js/snap.svg-min.min_e98eebed.js"></script>
+  <div id="tips"></div>
   <script src="./data/china.js"></script>
+  <script src="../dist/lite.umd.js"></script>
   <script>
-
-function initMap() {
-  const highlight = ['henan', 'hainan', 'guangdong']
-  var svg = Snap(chinaConfig.width, chinaConfig.height);
-  Object.keys(chinaConfig.shapes).forEach((key) => {
-    const value = chinaConfig.shapes[key]
-    var el = svg.paper.path(value)
-
-    el.attr({
-        fill: "#7fc8ff",
-        stroke: "#fff",
-        strokeWidth: 1,
-    });
-    if(highlight.indexOf(key) > -1) {
-      el.animate({
-        fill: "#fc0"
-      }, 1000, mina.easeout(), function() {
-        console.log("animation end")
-      })
-    }
-  });
-
-  return svg
-}
-
-const map = initMap();
-document.querySelector('#wrapper').appendChild(map.node);
-
+      const tips = document.querySelector('#tips')
+      const map = svgmap({
+        shapes: chinaConfig.shapes,
+        names: chinaConfig.names,
+        properties: chinaConfig.properties,
+        width: '565',
+        height: '475',
+        hoverCallback: function(e, params) {
+          tips.style.top = e.y + 'px'
+          tips.style.left = e.x + 'px'
+          tips.innerText = params.name
+          console.log(e, params);
+        }
+      });
+      document.querySelector('#wrapper').appendChild(map.node);
   </script>
 </body>
 </html>

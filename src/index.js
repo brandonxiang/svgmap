@@ -5,6 +5,6 @@ import lite from './lite';
 
 export default (opts) => {
   const {type, ...rest} = opts
-  const source = type === 'china'? chinaConfig.shapes : worldConfig.shapes
-  return lite({ source, ...rest})
+  const shapes = type === 'china'? chinaConfig.shapes : worldConfig.shapes
+  return lite({ shapes, ...rest})
 }

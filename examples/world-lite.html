@@ -8,7 +8,7 @@
   <script src="../dist/lite.umd.js"></script>
   <script src="./data/world.js"></script>
   <script>
-    const map = svgmap({source: worldConfig.shapes, width: '977', height: '377'});
+    const map = svgmap({shapes: worldConfig.shapes, width: '977', height: '377'});
     document.querySelector('#wrapper').appendChild(map.node);
   </script>
 </body>

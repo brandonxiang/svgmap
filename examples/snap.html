@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>snap.js</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <script src="//jdc.jd.com/fd/h5/1701/snapsvg/js/snap.svg-min.min_e98eebed.js"></script>
+  <script src="./data/china.js"></script>
+  <script>
+
+function initMap() {
+  const highlight = ['henan', 'hainan', 'guangdong']
+  var svg = Snap(chinaConfig.width, chinaConfig.height);
+  Object.keys(chinaConfig.shapes).forEach((key) => {
+    const value = chinaConfig.shapes[key]
+    var el = svg.paper.path(value)
+
+    el.attr({
+        fill: "#7fc8ff",
+        stroke: "#fff",
+        strokeWidth: 1,
+    });
+    if(highlight.indexOf(key) > -1) {
+      el.animate({
+        fill: "#fc0"
+      }, 1000, mina.easeout(), function() {
+        console.log("animation end")
+      })
+    }
+  });
+
+  return svg
+}
+
+const map = initMap();
+document.querySelector('#wrapper').appendChild(map.node);
+
+  </script>
+</body>
+</html>
