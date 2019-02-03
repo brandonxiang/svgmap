@@ -17,9 +17,9 @@
 
 function initMap() {
   const highlight = ['henan', 'hainan', 'guangdong']
-  var svg = Snap(chinaMapConfig.width, chinaMapConfig.height);
-  Object.keys(chinaMapConfig.shapes).forEach((key) => {
-    const value = chinaMapConfig.shapes[key]
+  var svg = Snap(chinaConfig.width, chinaConfig.height);
+  Object.keys(chinaConfig.shapes).forEach((key) => {
+    const value = chinaConfig.shapes[key]
     var el = svg.paper.path(value)
 
     el.attr({
